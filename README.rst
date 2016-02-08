@@ -43,9 +43,9 @@ desired results. In short:
     zabbix:
       lookup:
         agent:
-          pkg: zabbix22-agent
+          pkg: zabbix24-agent
         server:
-          pkg: zabbix22-server-mysql
+          pkg: zabbix24-server-mysql
 
 
 Now you just have to use ``zabbix.agent.conf`` sls file and that's it.

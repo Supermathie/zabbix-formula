@@ -1,6 +1,6 @@
 {% set zabbix = salt['grains.filter_by']({
   'Debian': {
-    'version_repo': '2.2',
+    'version_repo': '2.4',
     'user': 'zabbix',
     'group': 'zabbix',
     'agent': {
@@ -30,26 +30,26 @@
     'user': 'zabbix',
     'group': 'zabbix',
     'agent': {
-      'pkg': 'zabbix22-agent',
+      'pkg': 'zabbix24-agent',
       'service': 'zabbix_agentd',
-      'config': '/usr/local/etc/zabbix22/zabbix_agentd.conf'
+      'config': '/usr/local/etc/zabbix24/zabbix_agentd.conf'
     },
     'server': {
-      'pkg': 'zabbix22-server',
+      'pkg': 'zabbix24-server',
       'service': 'zabbix',
-      'config': '/usr/local/etc/zabbix22/zabbix_server.conf',
+      'config': '/usr/local/etc/zabbix24/zabbix_server.conf',
       'dbsocket': '/var/run/mysqld/mysqld.sock',
     },
     'proxy': {
-      'pkg': 'zabbix22-proxy',
+      'pkg': 'zabbix24-proxy',
       'service': 'zabbix_proxy',
-      'config': '/usr/local/etc/zabbix22/zabbix_proxy.conf',
+      'config': '/usr/local/etc/zabbix24/zabbix_proxy.conf',
       'dbname': '/var/lib/zabbix/zabbix_proxy.db'
     }
   },
 
   'default': {
-    'version_repo': '2.2',
+    'version_repo': '2.4',
     'user': 'zabbix',
     'group': 'zabbix',
     'agent': {
